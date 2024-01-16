@@ -11,7 +11,7 @@ const observerFn: ObserverFn = state => mutations => {
     const mutations = [...state.mutations];
     state.mutations = [];
     exhaustMutations(state, mutations);
-  }, 1000);
+  }, 10);
 };
 
 export const mountMutationObserver = async (state: CtState): Promise<void> => {
